@@ -10,6 +10,10 @@ Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
 
+@app.get("/")
+def read_root():
+    return {"message": "Welcome to my FastAPI app!"}
+
 # dependency untuk mendapatkan session database
 def get_db():
     db = SessionLocal()
@@ -52,3 +56,6 @@ def delete_item(item_id: int, db: Session = Depends(get_db)):
     if db_item is None:
         raise HTTPException(status_code=404, detail="Item not found")
     return {"message": "Item deleted"}
+
+    # uvicorn main:app --reload
+    # http://127.0.0.1:8000/docs

@@ -9,8 +9,11 @@ class ItemBase(BaseModel):
 class ItemCreate(ItemBase):
     pass
 
-class ItemRespnse(ItemBase):
+class ItemResponse(ItemBase):
     id: int 
 
     class Config:
-        orm_mode = True
+        from_attributes = True
+
+
+
