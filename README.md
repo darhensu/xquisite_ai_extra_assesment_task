@@ -1,6 +1,6 @@
 # Xquisite AI CRUD API
 
-Xquisite AI adalah sebuah proyek FastAPI yang menyediakan CRUD (Create, Read, Update, Delete) untuk mengelola kategori dan item dalam sebuah database menggunakan SQLAlchemy.
+Sebuah proyek FastAPI yang menyediakan CRUD (Create, Read, Update, Delete) untuk mengelola kategori dan item dalam sebuah database menggunakan SQLAlchemy.
 
 ## 🚀 Fitur
 - **Manajemen Kategori**: Tambah, baca, perbarui, dan hapus kategori.
