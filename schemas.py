@@ -21,18 +21,19 @@ class CategoryResponse(CategoryBase):
 
 # items
 class ItemBase(BaseModel):
-    name: str 
+    name: str
     description: str
-    #quantity: int 
+    category_id: int  
 
 class ItemCreate(ItemBase):
     pass
 
-class ItemResponse(ItemBase):
-    id: int 
+class ItemResponse(ItemBase):  # Tambahkan ini
+    id: int
 
     class Config:
-        from_attributes = True
+        orm_mode = True
+
 
 
 

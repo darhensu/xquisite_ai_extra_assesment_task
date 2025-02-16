@@ -41,11 +41,16 @@ def delete_category(db: Session, category_id: int):
 # ITEMS
 # Fungsi untuk membuat item baru dalam database
 def create_item(db: Session, item: schemas.ItemCreate):
-    db_item = models.Item(name=item.name, description=item.description)
+    db_item = models.Item(
+        name=item.name,
+        description=item.description,
+        category_id=item.category_id  
+    )
     db.add(db_item)
     db.commit()
     db.refresh(db_item)
     return db_item
+
 
 # Fungsi untuk mengambil semua item dari database
 def get_items(db:Session):
